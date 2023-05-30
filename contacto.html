@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css"> <!--el reset.css es una herramienta god que sirve para evitar esos margenes superiores que pone la pagina por defecto, asi nuestro estilo no es influenciado por el estilo que presenta la pagina web por defecto-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">
+            <h1"><a href="index.html"><img src="logo.png" alt="Logo de la Barbería Alura"></a> </h1> <!-- dando click al logo tambien va al inicio-->
+            <nav>
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="productos.html">Productos</a></li>
+                    <li> <a href="contacto.html">Contacto</a></li> 
+                </ul>
+            </nav>
+            </div>
+        </header>
+
+        <main class="lineal">
+
+                  <img class="contactoz" src="contacto.jpg" alt="Barbero feliz :D">
+
+
+            <form>
+                <label for="nombreApellido">Nombre y Apellidos</label>
+                <input type="text" id="nombreApellido" class="input-padron" required> <!-- el label y el id sirve para que al momento de dar click a la descripcion se activa el  cuadro de texto para escribir-->
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="input-padron" required placeholder="Email@dominio.com">
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="+51 XXX XXX XXX">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+
+                <fieldset>
+                    <legend>¿Como le gustaría ser contactado?</legend>
+
+                        <!--el name: "contacto" sirve para que solo se pueda elegir una de las tantas opcines que puede haber-->
+                    <label for="radio-email"> <input type="radio" name="contacto" value="email" id="radio-email">E-mail</label>
+                   
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+                    
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>whatsapp</label>        
+                </fieldset>
+
+                    <fieldset>
+                        <legend>¿En qué horario desea ser atentido?</legend>
+                        <select>
+                            <option>Mañana</option>
+                            <option>Tarde</option>
+                            <option>Noche</option>
+                        </select>
+                    </fieldset>
+                
+                    <table> <!--para crear tablas-->
+                        <thead>
+                            <tr> <!--para crear filas-->
+                                <th>Día</th> <!--para crear celdas-->
+                                <th>08h - 20h</th>
+                        </thead>
+        
+                        <tbody>
+                            </tr>
+                            <tr>
+                                <td>Lunes</td>
+                                <td>08h - 20h</td>
+                            </tr>
+                            <tr>
+                                <td>Miércoles</td>
+                                <td>08h - 20h</td>
+                            </tr>
+                            <tr>
+                                <td>Viernes</td>
+                                <td>08h - 20h</td>
+                            </tr>
+                        </tbody>                
+                    </table>
+
+                <label class="checkbox"><input type="checkbox" checked>
+                    ¿Le gustaría recibir novedades de la Barbería Alura?
+                </label>
+                
+
+                <input type="submit" value="Enviar Formulario" class="enviar"> <!--el value sirve para reemplazar texto encima del boton submit-->
+
+            </form>
+
+
+        </main>
+        <footer>
+            <img src="logo-blanco.png" alt="Logo de la Barbería Alura">
+            <p class="copyright">&copy Copyright Barbería Alura - 2023</p>
+        </footer>
+    </body>
+</html>
